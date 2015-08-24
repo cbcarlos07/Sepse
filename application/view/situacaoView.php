@@ -6,18 +6,19 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Painel de Esperado do Centro Cir&Uacute;rgico</title>
+        <title>Aviso de SEPSE!</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta HTTP-EQUIV="refresh" CONTENT="15"> 
         <link rel="stylesheet" type="text/css" href="public/style/situacao.css">
-        <link rel="shortcut icon" href="public/img/ham.png">
+        <link rel="shortcut icon" href="public/img/ham.ico">
         <script type="text/javascript">
 
                  function stop() {
                      document.embeds[0].stop();
                  }
-        </script> 
+        </script>
+
                
     </head>
       <body >
@@ -29,6 +30,7 @@ and open the template in the editor.
                                       </tr>
                                         <tbody>          
                                         <?php
+
                                             /* @var $pagina type */
                                             if(!isset($_GET['pagina']))
                                             {
@@ -206,7 +208,7 @@ and open the template in the editor.
                                            //   echo "imagem = ".$imagem.", situacao = ".$ordem."<br>";
 
                                                 echo "<tr bgcolor=$par >";
-                                                echo "<td align=center><img src=public/img/salcir.png width=29 height=29></td>";
+                                                echo "<td align=center><img id=$i src=public/img/salcir.png width=29 height=29 onclick=mudaImagem()></td>";
                                                 echo "<td>".$sp->getPaciente()->getNome()."</td>";
                                                 echo "<td>".$sp->getPrestador()."</td>";
                                                 echo "<td align=center> <font color=$cor>".$status."</font></td>";        
@@ -220,7 +222,15 @@ and open the template in the editor.
                                             <tbody>              
                       </table>    
                   </div>
-                </div>
+               <?php
+               echo "    <script type=text/javascript>";
+               echo "           function mudaImagem() {    ";
+               #echo "           alert($i);   ";
+               echo "                     document.getElementById($i).src=public/img/bw.png";
+               echo "             }";
+               echo "</script>";
+               ?>
+           </div>
                                              
           </body>
                            
