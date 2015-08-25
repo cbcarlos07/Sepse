@@ -268,12 +268,12 @@ and open the template in the editor.
                    //   elemento = document.getElementById("fundo"+cb.id);
                    if(cb.checked)
                    {
-                       document.getElementById("fundo"+cb.id).style.backgroundColor = "red";
+                       document.getElementById("fundo"+cb.id).style.backgroundColor = "white";
                   
                    }
                    else{
                     
-                       document.getElementById("fundo"+cb.id).style.backgroundColor = "white";
+                       document.getElementById("fundo"+cb.id).style.backgroundColor = "red";
                       
                    }
                    //elemento.style.backgroundColor = cb.checked ? "#ed0909" : "#fff";
