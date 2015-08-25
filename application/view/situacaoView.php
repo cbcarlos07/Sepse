@@ -237,7 +237,7 @@ and open the template in the editor.
           
                 <script type="text/javascript">
                     function cbalterna(cb) {
-//testando pra ver se foi
+//testando pra ver se foi 123
                  //   elemento = document.getElementById("fundo"+cb.id);
                   if(cb.checked)
                   {
