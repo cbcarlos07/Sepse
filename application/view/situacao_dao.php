@@ -24,7 +24,7 @@
                                 $query = "SELECT  P.NM_PACIENTE  PACIENTE
                                                   ,A.CD_ATENDIMENTO ATENDIMENTO
                                                   ,(
-                                                        select 'S' FROM DUAL
+                                                        select 'N' FROM DUAL
                                                        ) CIENTE
                                     FROM  ATENDIME  A
                                          ,PACIENTE  P
