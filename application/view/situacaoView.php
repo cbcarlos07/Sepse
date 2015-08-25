@@ -216,9 +216,9 @@ and open the template in the editor.
                                                 else{
                                                     $checked = '';
                                                 }
-                                                echo "<tr bgcolor=$par id=fundoc".$i.">";
+                                                echo "<tr bgcolor=$par id=fundoc".$i."  >";
                                                 #echo "<td align=center><a href='#'><img id=$i src=public/img/salcir.png width=29 height=29 onclick=mudaImagem();></a></td>";
-                                                echo "<td> <INPUT TYPE=checkbox id=c".$i."  onclick='cbalterna(this)' NAME=OPCAO".$i." VALUE=".$sp->getAtendimento()." class=checkbox $checked> </td>";
+                                                echo "<td> <INPUT TYPE=checkbox id=c".$i." onclick='cbalterna(this)' NAME=OPCAO".$i." VALUE=".$sp->getAtendimento()." class=checkbox $checked> </td>";
                                                 echo "<td><font color=$cor>".$sp->getPaciente()->getNome()."</font></td>";
                                                 echo "<td>".$sp->getPrestador()."</td>";
                                                 echo "<td align=center> <font color=$cor>".$status."</font></td>";        
@@ -238,10 +238,22 @@ and open the template in the editor.
                     function cbalterna(cb) {
                     
                     elemento = document.getElementById("fundo"+cb.id);
-
-                    elemento.style.backgroundColor = cb.checked ? "#ed0909" : "#fff";
-                    
+                  if(cb.checked)
+                  {
+                        //elemento.style.backgroundColor =  "#ed0909" ;
+                          //elemento.style.color = "#fff";
+                          document.getElementById("fundo"+cb.id).style.color = "#fff";
+                          document.getElementById("fundo"+cb.id).style.backgroundColor = "#ed0909";
                     }
+                  else{
+                       document.getElementById("fundo"+cb.id).style.backgroundColor = "#fff";
+                       document.getElementById("fundo"+cb.id).style.color = "#000";
+                        //elemento.style.backgroundColor =   "#fff";                        
+                        //elemento.style.color = "blue";
+                   }
+                    //elemento.style.backgroundColor = cb.checked ? "#ed0909" : "#fff";
+                    
+                  }
                     
                 </script>                             
                  <script type="text/javascript">
