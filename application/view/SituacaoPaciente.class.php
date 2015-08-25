@@ -7,15 +7,23 @@
  */
 include_once 'Paciente.class.php';
 class SituacaoPaciente {
-    
-        
+ 
+            
      private $atendimento;  
      private $paciente;
      private $mensagem;
      private $prestador;
      private $situacao;
      private $cirurgiaPrincipal;
-     
+     private $snCiente;
+        function getSnCiente() {
+        return $this->snCiente;
+    }
+
+    function setSnCiente($snCiente) {
+        $this->snCiente = $snCiente;
+    }
+
      
      public function getCirurgiaPrincipal() {
         return $this->cirurgiaPrincipal;

@@ -23,6 +23,9 @@
                             //$con = ociparse($connection_resource, $sql_text)
                                 $query = "SELECT  P.NM_PACIENTE  PACIENTE
                                                   ,A.CD_ATENDIMENTO ATENDIMENTO
+                                                  ,(
+                                                        select 'S' FROM DUAL
+                                                       ) CIENTE
                                     FROM  ATENDIME  A
                                          ,PACIENTE  P
                                          ,PRE_MED   PM
@@ -64,6 +67,7 @@
                              $sp->setPrestador("");
                              $sp->setSituacao("");
                              $sp->setMensagem("");
+                             $sp->setSnCiente($row["CIENTE"]);
                              
                              $situacaoList->addSituacao($sp);
                              
