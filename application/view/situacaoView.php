@@ -236,17 +236,17 @@ and open the template in the editor.
            </div>
                 <script type="text/javascript">
                     function cbalterna(cb) {
-                    
-                    elemento = document.getElementById("fundo"+cb.id);
+                      corFonte(cb);
+                 //   elemento = document.getElementById("fundo"+cb.id);
                   if(cb.checked)
                   {
                         //elemento.style.backgroundColor =  "#ed0909" ;
                           //elemento.style.color = "#fff";
-                          document.getElementById("fundo"+cb.id).style.color = "#fff";
+                        //  document.getElementById("fundo"+cb.id).style.color = "#fff";
                           document.getElementById("fundo"+cb.id).style.backgroundColor = "#ed0909";
                     }
                   else{
-                       document.getElementById("fundo"+cb.id).style.backgroundColor = "#fff";
+                       //document.getElementById("fundo"+cb.id).style.backgroundColor = "#fff";
                        document.getElementById("fundo"+cb.id).style.color = "#000";
                         //elemento.style.backgroundColor =   "#fff";                        
                         //elemento.style.color = "blue";
@@ -255,18 +255,30 @@ and open the template in the editor.
                     
                   }
                     
-                </script>                             
-                 <script type="text/javascript">
-                    function corFonte(cb) {
-                    
-                    elemento = document.getElementById("fundo"+cb.id);
+                </script>
+           <script type="text/javascript">
+               function corFonte(cb) {
 
-                    elemento.style.color = cb.checked ? "#ed0909" : "#fff";
-                    
-                    }
-                    
-                </script>     
-          </body>
+                   //   elemento = document.getElementById("fundo"+cb.id);
+                   if(cb.checked)
+                   {
+                       //elemento.style.backgroundColor =  "#ed0909" ;
+                       //elemento.style.color = "#fff";
+                       document.getElementById("fundo"+cb.id).style.color = "#fff";
+                   //    document.getElementById("fundo"+cb.id).style.backgroundColor = "#ed0909";
+                   }
+                   else{
+                     //  document.getElementById("fundo"+cb.id).style.backgroundColor = "#fff";
+                       document.getElementById("fundo"+cb.id).style.color = "#000";
+                       //elemento.style.backgroundColor =   "#fff";
+                       //elemento.style.color = "blue";
+                   }
+                   //elemento.style.backgroundColor = cb.checked ? "#ed0909" : "#fff";
+
+               }
+
+           </script>
+      </body>
                            
            
 </html>
