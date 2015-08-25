@@ -208,7 +208,8 @@ and open the template in the editor.
                                            //   echo "imagem = ".$imagem.", situacao = ".$ordem."<br>";
 
                                                 echo "<tr bgcolor=$par >";
-                                                echo "<td align=center><img id=$i src=public/img/salcir.png width=29 height=29 onclick=mudaImagem()></td>";
+                                                #echo "<td align=center><a href='#'><img id=$i src=public/img/salcir.png width=29 height=29 onclick=mudaImagem();></a></td>";
+                                                echo "<td align=center><INPUT TYPE=checkbox NAME=OPCAO".$i." VALUE=".$sp->getAtendimento()." class=checkbox></td>";
                                                 echo "<td>".$sp->getPaciente()->getNome()."</td>";
                                                 echo "<td>".$sp->getPrestador()."</td>";
                                                 echo "<td align=center> <font color=$cor>".$status."</font></td>";        

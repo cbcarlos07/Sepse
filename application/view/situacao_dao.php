@@ -22,6 +22,7 @@
 				// executo a query
                             //$con = ociparse($connection_resource, $sql_text)
                                 $query = "SELECT  P.NM_PACIENTE  PACIENTE
+                                                  ,A.CD_ATENDIMENTO ATENDIMENTO
                                     FROM  ATENDIME  A
                                          ,PACIENTE  P
                                          ,PRE_MED   PM
@@ -56,7 +57,7 @@
                           
                              $sp =  new SituacaoPaciente(); 
                              $paciente = new Paciente();                                                       
-                             $sp->setAtendimento("");
+                             $sp->setAtendimento($row["ATENDIMENTO"]);
                              $paciente->setNome($row["PACIENTE"]);
                              $sp->setPaciente($paciente);
                              $sp->setCirurgiaPrincipal("");

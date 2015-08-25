@@ -16,6 +16,7 @@ class SituacaoPaciente {
      private $situacao;
      private $cirurgiaPrincipal;
      
+     
      public function getCirurgiaPrincipal() {
         return $this->cirurgiaPrincipal;
     }
