@@ -234,14 +234,7 @@ and open the template in the editor.
                   </div>
 
            </div>
-          <script>
-                function trocaCor(id) {
-                var cor = document.getElementById(id).style.background
-                if(cor == 'red') cor = 'white';
-                else cor = 'red';
-                document.getElementById(id).style.background = cor;
-                }
-            </script>    
+          
                 <script type="text/javascript">
                     function cbalterna(cb) {
 
@@ -251,12 +244,12 @@ and open the template in the editor.
                         //elemento.style.backgroundColor =  "#ed0909" ;
                           //elemento.style.color = "#fff";
                         //  document.getElementById("fundo"+cb.id).style.color = "#fff";
-                          document.getElementById("fundo"+cb.id).style.color = "black";
+                          document.getElementById("fundo"+cb.id).style.color = "white";
                           
                           corFonte(cb);
                     }
                   else{
-                      document.getElementById("fundo"+cb.id).style.color = "white";
+                      document.getElementById("fundo"+cb.id).style.color = "black";
                      //  document.getElementById("fundo"+cb.id).style.color = "#000";
                         //elemento.style.backgroundColor =   "#fff";                        
                         //elemento.style.color = "blue";
@@ -268,33 +261,20 @@ and open the template in the editor.
                     
                 </script>
                 
-                <script>
-                            function trocaCor1(id) {
-                            var cor = document.getElementById(id).style.color
-                            if(cor == '#fff') cor = '#000';
-                            else cor = '#fff';
-                            document.getElementById(id).style.color = cor;
-                            }
-                </script>
+               
            <script type="text/javascript">
                function corFonte(cb) {
 
                    //   elemento = document.getElementById("fundo"+cb.id);
                    if(cb.checked)
                    {
-                       //elemento.style.backgroundColor =  "#ed0909" ;
-                       //elemento.style.color = "#fff";
-                   //    alert("fundo"+cb.id);
-                   //    document.getElementById("fundo"+cb.id).style.color = "black";
-                       document.getElementById("fundo"+cb.id).style.backgroundColor = "white";
-                   //    document.getElementById("fundo"+cb.id).style.backgroundColor = "#ed0909";
+                       document.getElementById("fundo"+cb.id).style.backgroundColor = "red";
+                  
                    }
                    else{
-                     //  document.getElementById("fundo"+cb.id).style.backgroundColor = "#fff";
-                   //    document.getElementById("fundo"+cb.id).style.color = "black";
-                       document.getElementById("fundo"+cb.id).style.backgroundColor = "red";
-                       //elemento.style.backgroundColor =   "#fff";
-                       //elemento.style.color = "blue";
+                    
+                       document.getElementById("fundo"+cb.id).style.backgroundColor = "white";
+                      
                    }
                    //elemento.style.backgroundColor = cb.checked ? "#ed0909" : "#fff";
 

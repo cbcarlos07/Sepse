@@ -1,48 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8640375c-b365-453c-9969-dc6d37c807c9" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\.idea\.name" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\.idea\misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\.idea\modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\.idea\sepse.iml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\.idea\vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\application\services\SituacaoList.class.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\application\services\SituacaoListIterator.class.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\application\services\Url.class.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\application\view\ConnectionFactory.class.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\application\view\Paciente.class.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\application\view\Situacao.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\application\view\SituacaoList.class.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\application\view\SituacaoListIterator.class.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\application\view\SituacaoPaciente.class.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\application\view\Situacao_Controller.class.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\application\view\TesteView.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\application\view\Url.class.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\application\view\situacaoView.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\application\view\situacao_dao.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\index.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\nbproject\private\config.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\nbproject\private\private.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\nbproject\private\private.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\nbproject\project.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\nbproject\project.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\public\audio\preview.mp3" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\public\audio\preview2.mp3" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\public\img\Thumbs.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\public\img\aguard.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\public\img\alta.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\public\img\amarela.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\public\img\ham.ico" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\public\img\ham.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\public\img\salapos.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\public\img\salcir.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\public\img\verde.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\public\img\vermelha.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\public\style\demo.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\public\style\shCore.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\sepse\public\style\situacao.css" afterPath="" />
-    </list>
+    <list default="true" id="8640375c-b365-453c-9969-dc6d37c807c9" name="Default" comment="" />
     <ignored path="sepse.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
