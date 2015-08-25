@@ -209,7 +209,7 @@ and open the template in the editor.
 
                                                 echo "<tr bgcolor=$par >";
                                                 #echo "<td align=center><a href='#'><img id=$i src=public/img/salcir.png width=29 height=29 onclick=mudaImagem();></a></td>";
-                                                echo "<td align=center><INPUT TYPE=checkbox NAME=OPCAO".$i." VALUE=".$sp->getAtendimento()." class=checkbox></td>";
+                                                echo "<td align=center><INPUT TYPE=checkbox NAME=OPCAO".$i." VALUE=".$sp->getAtendimento()." class=checkbox ></td>";
                                                 echo "<td>".$sp->getPaciente()->getNome()."</td>";
                                                 echo "<td>".$sp->getPrestador()."</td>";
                                                 echo "<td align=center> <font color=$cor>".$status."</font></td>";        
@@ -223,14 +223,7 @@ and open the template in the editor.
                                             <tbody>              
                       </table>    
                   </div>
-               <?php
-               echo "    <script type=text/javascript>";
-               echo "           function mudaImagem() {    ";
-               #echo "           alert($i);   ";
-               echo "                     document.getElementById($i).src=public/img/bw.png";
-               echo "             }";
-               echo "</script>";
-               ?>
+
            </div>
                                              
           </body>
