@@ -39,7 +39,7 @@ and open the template in the editor.
                                             else{
                                                 $pagina = $_GET['pagina'];
                                             }
-                     
+                                                //.
                      
                                             // bloco 2 - defina o número de registros exibidos por página
                                             $num_por_pagina = 30; 
