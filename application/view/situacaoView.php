@@ -4,6 +4,26 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<?php
+if(isset($_GET['ciente'])){
+    $ciente = $_GET['ciente'];
+}else{
+    $ciente = 'N';
+}
+if(isset($_GET['codigo'])){
+    $cd = $_GET['codigo'];
+}else{
+    $cd = 0;
+}
+
+if(isset($_GET['ciente'])){
+    echo 'Ciente: '.$ciente;
+}
+
+
+?>
+
+
 <html>
     <head>
         <title>AVISO SEPSE</title>
@@ -216,9 +236,9 @@ and open the template in the editor.
                                                 else{
                                                     $checked = 'checked';
                                                 }
-                                                echo "<tr bgcolor=$par id=fundoc".$i."  >";
+                                                echo "<tr bgcolor=$par id=fundoc".$i." class=corpo >";
                                                 #echo "<td align=center><a href='#'><img id=$i src=public/img/salcir.png width=29 height=29 onclick=mudaImagem();></a></td>";
-                                                echo "<td> <INPUT TYPE=checkbox id=c".$i." onclick='cbalterna(this)' NAME=OPCAO".$i." VALUE=".$sp->getAtendimento()." class=checkbox $checked> </td>";
+                                                echo "<td> <INPUT TYPE=checkbox id=c".$i." onclick='cbalterna(this,$i)' NAME=OPCAO".$i." VALUE=S class=checkbox $checked> </td>";
                                                 echo "<td> ".$sp->getPaciente()->getNome()." </td>";
                                                 echo "<td>".$sp->getPrestador()."</td>";
                                                 echo "<td align=center> <font color=$cor>".$status."</font></td>";        
@@ -236,33 +256,38 @@ and open the template in the editor.
            </div>
           
                 <script type="text/javascript">
-                    function cbalterna(cb) {
+                    function cbalterna(cb, cod) {
 //testando pra ver se foi 123
                  //   elemento = document.getElementById("fundo"+cb.id);
                   if(cb.checked)
                   {
-                        //elemento.style.backgroundColor =  "#ed0909" ;
-                          //elemento.style.color = "#fff";
-                        //  document.getElementById("fundo"+cb.id).style.color = "#fff";
                           
                           document.getElementById("fundo"+cb.id).style.color = "black";
-                          
+                      //    window.location = 'arquivo.php?variavel='+valor
+                            //$_SERVER['PHP_SELF']
                           corFonte(cb);
+                          ciente(cb, cod);
                     }
                   else{
                       
                       document.getElementById("fundo"+cb.id).style.color = "white";
-                     //  document.getElementById("fundo"+cb.id).style.color = "#000";
-                        //elemento.style.backgroundColor =   "#fff";                        
-                        //elemento.style.color = "blue";
+                     
                       corFonte(cb);
+                      ciente(cb, cod);
                    }
-                    //elemento.style.backgroundColor = cb.checked ? "#ed0909" : "#fff";
                     
                   }
                     
                 </script>
-                
+                <script type="text/javascript">
+                 function ciente(cb, cdatend){
+                        if(cb.checked){
+                         //  window.location = " application/view/Ciente.php?codigo="+cdatend+"&ciente=S";
+                        }else{
+                        //    window.location = " application/view/Ciente.php?codigo="+cdatend+"&ciente=N";
+                            }
+                 }
+                </script>
                
            <script type="text/javascript">
                function corFonte(cb) {

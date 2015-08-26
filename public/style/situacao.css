@@ -22,6 +22,10 @@ table{
 }
 tbody{
     font-size: 18px;
+    
+}
+.corpo{
+    color: #ffffff;
 }
 body{
     width: 100%;
