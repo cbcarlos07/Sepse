@@ -21,23 +21,14 @@
 			try{
 				// executo a query
                             //$con = ociparse($connection_resource, $sql_text)
-                                $query = "SELECT  P.NM_PACIENTE  PACIENTE
-                                                  ,A.CD_ATENDIMENTO ATENDIMENTO
-                                                  ,(
-                                                        select 'N' FROM DUAL
-                                                       ) CIENTE
-                                    FROM  ATENDIME  A
-                                         ,PACIENTE  P
-                                         ,PRE_MED   PM
-                                         ,ITPRE_MED IPM
-                                         ,TIP_PRESC TP
-                                   WHERE  A.CD_PACIENTE    =   P.CD_PACIENTE
-                                     AND  A.CD_ATENDIMENTO =   PM.CD_ATENDIMENTO
-                                     AND  IPM.CD_PRE_MED   =   PM.CD_PRE_MED
-                                     AND  IPM.CD_TIP_PRESC =   TP.CD_TIP_PRESC
-                                     AND  A.TP_ATENDIMENTO =   'I'
-                                     AND  TP.CD_TIP_PRESC  =   13334
-                                     AND  A.DT_ALTA            IS NULL";
+                                $query = "SELECT CD_PED_LAB,
+                                               NM_PACIENTE,
+                                               SETOR,
+                                               SOM,
+                                               DT_PEDIDO,
+                                               HR_PED_LAB,
+                                               TIPO
+                                               FROM DBAMV.VDIC_HAM_PROT_SEPSE";
 				$stmt = ociparse($con, $query);
                                         //("select p.nm_prestador nome from dbamv.prestador p");
 				//$stmt = $this->conex->query($query);
@@ -47,27 +38,12 @@
                            $situacaoList = new SituacaoList();
                            
                          while ($row = oci_fetch_array($stmt, OCI_ASSOC)){
-                             
-                            // $status = substr($row["SITUACAO"], 2,35);  // retorna "abcde"
-                             
-                             //echo $status."<br>";
-                         /*    if(isset($row["MSG.MENSAGEM"])){
-                               $mensagem = $row["MENSAGEM"];  
-                             }else{
-                               $mensagem = "";  
-                             }
-                          * */
-                          
-                             $sp =  new SituacaoPaciente(); 
-                             $paciente = new Paciente();                                                       
-                             $sp->setAtendimento($row["ATENDIMENTO"]);
-                             $paciente->setNome($row["PACIENTE"]);
-                             $sp->setPaciente($paciente);
-                             $sp->setCirurgiaPrincipal("");
-                             $sp->setPrestador("");
-                             $sp->setSituacao("");
-                             $sp->setMensagem("");
-                             $sp->setSnCiente($row["CIENTE"]);
+                            
+                             $sp =  new SituacaoPaciente();                                                                                 
+                             $sp->setPedido($row["CD_PED_LAB"]);                             
+                             $sp->setPaciente($row["NM_PACIENTE"]);
+                             $sp->setLocal($row["SETOR"]);
+                             $sp->setDescricao($row["TIPO"]);
                              
                              $situacaoList->addSituacao($sp);
                              
@@ -83,24 +59,21 @@
         public function recuperarTotal(){
             $conn = new ConnectionFactory();
             $con = $conn->getConnection();
+            $total = 0;
             //$paciente = new Paciente();
             //$sp = new SituacaoPaciente();
 			try{
 				// executo a query
                             //$con = ociparse($connection_resource, $sql_text)
-                                $query = "SELECT  P.NM_PACIENTE  PACIENTE
-                                FROM  ATENDIME  A
-                                     ,PACIENTE  P
-                                     ,PRE_MED   PM
-                                     ,ITPRE_MED IPM
-                                     ,TIP_PRESC TP
-                               WHERE  A.CD_PACIENTE    =   P.CD_PACIENTE
-                                 AND  A.CD_ATENDIMENTO =   PM.CD_ATENDIMENTO
-                                 AND  IPM.CD_PRE_MED   =   PM.CD_PRE_MED
-                                 AND  IPM.CD_TIP_PRESC =   TP.CD_TIP_PRESC
-                                 AND  A.TP_ATENDIMENTO =   'I'
-                                 AND  TP.CD_TIP_PRESC  =   13334
-                                 AND  A.DT_ALTA            IS NULL";
+                                $query = "SELECT CD_PED_LAB,
+                                               NM_PACIENTE,
+                                               SETOR,
+                                               SOM,
+                                               DT_PEDIDO,
+                                               HR_PED_LAB,
+                                               TIPO
+                                               FROM DBAMV.VDIC_HAM_PROT_SEPSE
+                                     ";
 				$stmt = ociparse($con, $query);
                                         //("select p.nm_prestador nome from dbamv.prestador p");
 				//$stmt = $this->conex->query($query);
@@ -108,7 +81,7 @@
 			   // desconecta 
                               
                            $situacaoList = new SituacaoList();
-                           $total = 0;
+                           
                          while ($row = oci_fetch_array($stmt, OCI_ASSOC)){
                              $total++;
                             

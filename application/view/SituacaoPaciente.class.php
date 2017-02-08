@@ -5,85 +5,62 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-include_once 'Paciente.class.php';
+
 class SituacaoPaciente {
  
             
-     private $atendimento;  
+     private $pedido;  
      private $paciente;
-     private $mensagem;
-     private $prestador;
-     private $situacao;
-     private $cirurgiaPrincipal;
-     private $snCiente;
-        function getSnCiente() {
-        return $this->snCiente;
+     private $local;
+     private $descricao;
+
+    /**
+     * @return mixed
+     */
+    public function getDescricao()
+    {
+        return $this->descricao;
     }
 
-    function setSnCiente($snCiente) {
-        $this->snCiente = $snCiente;
-    }
-
-     
-     public function getCirurgiaPrincipal() {
-        return $this->cirurgiaPrincipal;
-    }
-
-    public function setCirurgiaPrincipal($cirurgiaPrincipal) {
-        $this->cirurgiaPrincipal = $cirurgiaPrincipal;
+    /**
+     * @param mixed $descricao
+     * @return SituacaoPaciente
+     */
+    public function setDescricao($descricao)
+    {
+        $this->descricao = $descricao;
         return $this;
     }
+     
+    
 
     
 
-     public function getAtendimento() {
-         return $this->atendimento;
+     public function getPedido() {
+         return $this->pedido;
+     }
+     
+      public function setPedido($pedido) {
+         $this->pedido = $pedido;
+         return $this;
      }
 
      public function getPaciente() {
          return $this->paciente;
      }
-
-     public function getMensagem() {
-         return $this->mensagem;
-     }
-
-     public function setMensagem($mensagem) {
-         $this->mensagem = $mensagem;
-         return $this;
-     }
-
      
-     public function getPrestador() {
-         return $this->prestador;
-     }
-
-     public function getSituacao() {
-         return $this->situacao;
-     }
-
-     public function setAtendimento($atendimento) {
-         $this->atendimento = $atendimento;
-         return $this;
-     }
-
-     public function setPaciente($paciente) {
+      public function setPaciente($paciente) {
          $this->paciente = $paciente;
          return $this;
      }
 
-     
-
-     public function setPrestador($prestador) {
-         $this->prestador = $prestador;
-         return $this;
+     public function getLocal() {
+         return $this->local;
      }
 
-     public function setSituacao($situacao) {
-         $this->situacao = $situacao;
+     public function setLocal($local) {
+         $this->local = $local;
          return $this;
      }
-
-
 
 }

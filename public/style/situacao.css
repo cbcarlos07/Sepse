@@ -17,25 +17,30 @@ table{
     
     position: relative;
     left: -2px; /* posiciona a 90px para a esquerda */ 
-    top: 3px; /* posiciona a 70px para baixo */
+    top: 10px; /* posiciona a 70px para baixo */
+    left: 5%;
+    
 
 }
 tbody{
-    font-size: 18px;
+    font-size: 25px;
     
 }
 .corpo{
-    color: #ffffff;
+    color: #000;
 }
 body{
-    width: 100%;
+    width: 90%;
+    
 }
 .par{
     color: #d5e6ef;
 }
 #titulo{
-    background:  #00cccc;
-    font-size: 20px;
+    background:  #029393;
+    font-size: 25px;
+    height: 50px;
+    color: #fff;
     
 }
 .checkbox, .radio {
@@ -47,4 +52,11 @@ body{
   clear: left;
   float: left;
   margin-left: 30%
+}
+h2{
+    margin-left: 30%;
+    font-family: "Arial";
+    color: blue;
+    font-weight: bold;
+    font-size: 22px;
 }
