@@ -24,8 +24,8 @@ require "./application/services/Url.class.php";
 		 }
             
 
-        if( file_exists( "./application/view/situacaoView.php" ) )
-            require "./application/view/situacaoView.php";
+        if( file_exists( "situacaoView.php" ) )
+            require "situacaoView.php";
         else
             require "modulos/404.php";
 		#header('Location:./application/view/situacaoView.php');
