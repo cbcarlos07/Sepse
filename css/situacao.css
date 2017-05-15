@@ -1,0 +1,48 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07/05/2015, 09:36:59
+    Author     : carlos.bruno
+*/
+
+
+#tabela{
+    
+    position: relative;
+    left: -2px; /* posiciona a 90px para a esquerda */ 
+    top: 10px; /* posiciona a 70px para baixo */
+    left: 5%;
+    
+
+}
+
+.corpo{
+    color: #000;
+}
+body{
+    width: 90%;
+    
+}
+.par{
+    color: #d5e6ef;
+}
+#titulo{
+    background:  #029393;
+    font-size: 25px;
+    height: 50px;
+    color: #fff;
+    
+}
+.checkbox, .radio {
+  width: 19px;
+  height: 25px;
+  padding: 0 5px 0 0;
+  background: url(checkbox.png) no-repeat;
+  display: block;
+  clear: left;
+  float: left;
+  margin-left: 30%
+}
